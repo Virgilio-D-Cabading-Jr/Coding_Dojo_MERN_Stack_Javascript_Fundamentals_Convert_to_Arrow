@@ -44,10 +44,9 @@
             setBackgroundColorById("body", "red");
         }
         
-        
-        document.getElementById("hover-this").onmouseout = function(){
-            setBackgroundColorById("body", "white");
-        }
+        // Change the bsckground to white on mouse out
+        document.getElementById("hover-this").addEventListener("mouseout", () => {setBackgroundColorById("body", "white")});
+
         function getValueFromId(id){
             return document.getElementById(id).value;
         }
