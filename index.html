@@ -30,27 +30,41 @@
     </p>
     <script>
         // Change the background color of this "paragraph" to Blue
-        document.getElementById("button").onclick = () => {
-            document.getElementById("paragraph").style = "background-color: blue"
-        };
+        document.getElementById("button").addEventListener("click", () => {
+            setBackgroundColorById("paragraph", "blue");
+        });
 
         // Create an alert box using input text
         document.getElementById("alert").onclick = () => {
             alert(document.getElementById("popup-input").value);
         }
 
-        document.getElementById("hover-this").onmouseover = function(){
+        // Change the background to red on mouse over
+        document.getElementById("hover-this").onmouseover = () => {
             setBackgroundColorById("body", "red");
         }
+        
+        // = function(){
+        //     setBackgroundColorById("body", "red");
+        // }
+
+        // document.getElementById("hover-this").onmouseover = function(){
+        //     setBackgroundColorById("body", "red");
+        // }
         document.getElementById("hover-this").onmouseout = function(){
             setBackgroundColorById("body", "white");
         }
         function getValueFromId(id){
             return document.getElementById(id).value;
         }
-        function setBackgroundColorById(id, color){
+
+        let setBackgroundColorById = (id, color) => {
             document.getElementById(id).style = "background-color: " + color;
         }
+
+        // function setBackgroundColorById(id, color){
+        //     document.getElementById(id).style = "background-color: " + color;
+        // }
         function mouseOverFunction(el){
             el.style = "background-color: red";
         }
