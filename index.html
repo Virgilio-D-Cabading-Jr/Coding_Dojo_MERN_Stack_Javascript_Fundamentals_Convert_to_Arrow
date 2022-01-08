@@ -33,9 +33,12 @@
         document.getElementById("button").onclick = () => {
             document.getElementById("paragraph").style = "background-color: blue"
         };
-        document.getElementById("alert").onclick = function(){
+
+        // Create an alert box using input text
+        document.getElementById("alert").onclick = () => {
             alert(document.getElementById("popup-input").value);
         }
+
         document.getElementById("hover-this").onmouseover = function(){
             setBackgroundColorById("body", "red");
         }
